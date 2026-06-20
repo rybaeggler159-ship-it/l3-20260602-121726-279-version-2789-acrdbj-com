@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://young-band-ba97.laodayizhi.workers.dev/ads-widget.js"></script>
+<title>影片搜索-国产电影大全-高分电影排行榜-热门内容持续更新</title>
+  <meta name="description" content="国产电影大全影片搜索页，支持按片名、地区、年份、类型、标签和分类筛选。">
+  <meta name="keywords" content="影片搜索,电影筛选,国产电影大全,国产电影,高分电影,电影排行榜,热门影片,精选电影,内容更新">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="index.html" aria-label="国产电影大全">
+      <span class="brand-mark">影</span>
+      <span class="brand-text">国产电影大全</span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a class="nav-link" href="index.html">首页</a>
+      <a class="nav-link" href="categories.html">分类</a>
+      <a class="nav-link" href="ranking.html">排行榜</a>
+      <a class="nav-link" href="category-high-score.html">高分电影</a>
+      <a class="nav-link is-active" href="search.html">搜索</a>
+    </nav>
+    <form class="header-search" action="search.html" method="get" data-search-form>
+      <label class="sr-only" for="header-search-0">搜索影片</label>
+      <input id="header-search-0" type="search" name="q" placeholder="搜索影片..." autocomplete="off">
+      <button type="submit" aria-label="搜索">⌕</button>
+    </form>
+    <button class="mobile-menu-button" type="button" data-mobile-menu-button aria-label="打开菜单">☰</button>
+  </div>
+  <nav class="mobile-nav" data-mobile-menu aria-label="移动端导航">
+      <a class="mobile-nav-link" href="index.html">首页</a>
+      <a class="mobile-nav-link" href="categories.html">分类</a>
+      <a class="mobile-nav-link" href="ranking.html">排行榜</a>
+      <a class="mobile-nav-link" href="category-high-score.html">高分电影</a>
+      <a class="mobile-nav-link is-active" href="search.html">搜索</a>
+    <form class="mobile-search" action="search.html" method="get" data-search-form>
+      <input type="search" name="q" placeholder="搜索影片..." autocomplete="off">
+      <button type="submit">搜索</button>
+    </form>
+  </nav>
+</header>
+
+<main>
+  <section class="inner-hero search-hero">
+    <div class="container">
+      <span>Search</span>
+      <h1>影片搜索与筛选</h1>
+      <p>输入影片名、地区、年份、类型或标签，快速定位片库中的独立详情页。</p>
+    </div>
+  </section>
+  <section class="container search-app">
+    <div class="search-panel">
+      <label>
+        <span>关键词</span>
+        <input id="searchInput" type="search" placeholder="例如：国产电影、悬疑、2025、韩国" autocomplete="off">
+      </label>
+      <div class="search-options">
+        <label>
+          <span>年份</span>
+          <select id="yearFilter">
+            <option value="">全部年份</option>
+          </select>
+        </label>
+        <label>
+          <span>地区</span>
+          <select id="regionFilter">
+            <option value="">全部地区</option>
+          </select>
+        </label>
+        <label>
+          <span>分类</span>
+          <select id="categoryFilter">
+            <option value="">全部分类</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="search-result-head">
+      <h2>搜索结果</h2>
+      <p id="searchCount">正在加载片库...</p>
+    </div>
+    <div class="movie-grid library-grid" id="searchResults"></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="footer-brand" href="index.html">
+        <span class="brand-mark">影</span>
+        <span>国产电影大全</span>
+      </a>
+      <p>国产电影大全整理国产影片片库，覆盖高分榜单、热门影片和精选片单。</p>
+    </div>
+    <div>
+      <h2>快速导航</h2>
+      <ul>
+        <li><a href="categories.html">分类总览</a></li>
+        <li><a href="ranking.html">高分排行榜</a></li>
+        <li><a href="search.html">影片搜索</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>片库分类</h2>
+      <ul class="footer-category-list">
+      <li><a href="category-guochan-library.html">国产片库<span>200</span></a></li>
+      <li><a href="category-high-score.html">高分榜单<span>200</span></a></li>
+      <li><a href="category-hot-movies.html">热门影片<span>200</span></a></li>
+      <li><a href="category-selected-list.html">精选片单<span>200</span></a></li>
+      <li><a href="category-drama-family.html">剧情家庭<span>200</span></a></li>
+      <li><a href="category-action-crime.html">动作犯罪<span>200</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 国产电影大全</span>
+    <span>热门内容持续更新</span>
+  </div>
+</footer>
+
+  <script src="assets/search-data.js"></script>
+  <script src="assets/site.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60fa60a3da050a73eefefaaebe0afaf5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
